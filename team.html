@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotics Club VIT Chennai</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url("https://c4.wallpaperflare.com/wallpaper/62/205/230/mr-robot-fsociety-screen-shot-dark-elliot-mr-robot-hd-wallpaper-preview.jpg") no-repeat center center fixed;
+            background-size: cover;
+            color: #f0f0f0;
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .logos img {
+            height: 50px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .navigation {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navigation a {
+            color: #f0f0f0;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .navigation a:hover {
+            background-color: #f0f0f0;
+            color: #000;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 150px 50px;
+            text-align: left;
+        }
+        .content h1 {
+            font-size: 54px;
+            margin: 0;
+            font-weight: bold;
+            color: #ffffff;
+            transition: font-size 0.3s;
+            margin-right: 60px;
+        }
+
+        .content h1:hover {
+            font-size: 58px;
+        }
+
+        .content p {
+            font-size: 22px;
+            margin-top: 20px;
+            color: #dcdcdc;
+        }
+
+        .cta-button {
+            margin-top: 30px;
+            padding: 20px 30px;
+            background-color: rgb(235, 26, 130);
+            color: #000;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .cta-button:hover {
+            background-color: rgb(232, 59, 145);
+        }
+        .roboimage {
+            position: absolute;
+            top: 180px; 
+            right: 260px; 
+            width: 150px;
+            height: auto;
+        }
+        .roboimage {
+            position: absolute;
+            top: 180px;
+            right: 260px;
+            width: 150px;
+            height: auto;
+        }
+
+        .roboimage img {
+            height: 500px;
+            width: 400px;
+            height: auto;
+            display: block;
+        }
+        .slider-container {
+            width: 80%;
+            max-width: 800px;
+            overflow: hidden;
+            position: relative;
+            background: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 100px;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .slide img {
+            width: 400px;
+            height: 400px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .slide h3 {
+            margin: 10px 0 5px;
+            font-size: 18px;
+        }
+
+        .slide p {
+            margin: 0;
+            color: white;
+        }
+
+        .controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .control {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .control:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+        .faculty h1{
+            margin-top: 200px;
+            text-align: center;
+        }
+        .members h1{
+            text-align:center;
+            margin-top: 100px;
+        }
+        .photo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .header h1{
+            margin-top: 100px;
+        }
+        a {
+            color: #00ff88;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #ff0077;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #00ff88;
+            color: #121212;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            
+        }
+
+        .card {
+            background-color: #2a2a2a;
+            border-radius: 10px;
+            width: 300px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+        }
+
+        .card h3 {
+            color: rgb(235, 26, 130);
+        }
+
+        .footer {
+            background-color: #1e1e1e;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer a {
+            margin: 0 10px;
+            font-size: 1.2em;
+        }
+        
+        
+
+        </style>
+        <body>
+            <div class="header">
+                <div class="logos">
+                    <a href="aboutus.html"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSndtCVNWRckuQ5oftYVXuliYq8v-C9DqBZPw&s"
+                            alt="VIT Chennai Logo"></a>
+                    <a href="roboclub.html"><img
+                            src="https://media.licdn.com/dms/image/v2/C560BAQHel4pxxrPm-A/company-logo_200_200/company-logo_200_200/0/1669408320260?e=2147483647&v=beta&t=GzwSZJZbZX3mmwghbz2joTcRb__TiZ5EzdoXr_nNmtk"
+                            alt="Robotics Club Logo"></a>
+                </div>
+                <div class="navigation">
+                    <a href="aboutus.html">About</a>
+                    <a href="faqs.html">FAQs</a>
+                    <a href="team.html">Team</a>
+                    <a href="contact.html">Contact</a>
+                    
+                </div>
+            </div>
+            <div class="content">
+                <h1>Engineers,Coders and Creators</h1>
+                <p>Discover our talent through our innovations</p>
+                <a href="roboclub.html"><button class="cta-button">Home Page</button></a>
+            <div class="roboimage">
+                <img src="https://i.imgur.com/EXy0CV1.png">
+            </div>
+            <div class="faculty">
+                <h1>From the desk of faculty coordinator</h1>
+                <h2>Dr. Arockia Selvakumar Arockia Doss</h2>
+                <p>As the faculty coordinator of the Robotics Club, it is my privilege to introduce our dynamic and vibrant community. Our club is a hub of creativity, innovation, and collaborative learning. We provide a platform for students to explore their passion for robotics, expand their technical skills, and cultivate a problem-solving mindset. Through engaging workshops, exciting projects, and competitive events, we aim to inspire and empower our members to excel in the world of robotics. Our club fosters a supportive environment where students can network, share ideas, and work together to push the boundaries of technological advancement. With a dedicated team of mentors and enthusiastic members, we strive to create a transformative experience that prepares students for future challenges and opportunities in the field of robotics.</p>
+            </div>
+            <div class="photo">
+                <img src="https://roboticsclubvitc.co/club/people/arokya.jpg">
+            </div>
+            <div class="members">
+                <h1>Our Talented and Experienced Team Members</h1>
+                <h3>Core 2024-2025</h3>
+            </div>
+                <div class="slider-container">
+                    <div class="slides">
+                        <div class="slide">
+                            <img src="https://roboticsclubvitc.co/club/people/Naman_Tolasaria.JPG" alt="Team Member 1">
+                            <h3>Naman Tolarsaria</h3>
+                            <p>President</p>
+                        </div>
+                        <div class="slide">
+                            <img src="https://roboticsclubvitc.co/club/people/Sree%20Harini.jpeg" alt="Team Member 2">
+                            <h3>S Sree Harini</h3>
+                            <p>Vice President</p>
+                        </div>
+                        <div class="slide">
+                            <img src="https://roboticsclubvitc.co/club/people/Neharika.jpeg" alt="Team Member 3">
+                            <h3>Neharika</h3>
+                            <p>Web Development Head</p>
+                        </div>
+                        <div class="slide">
+                            <img src="https://roboticsclubvitc.co/club/people/T.Mahesh%20Karthick.jpeg" alt="Team Member 4">
+                            <h3>T.Mahesh Karthick</h3>
+                            <p>Design Head</p>
+                        </div>
+                        <div class="slide">
+                                <img src="https://roboticsclubvitc.co/club/people/Pranav%20Dandegaonkar.jpeg" alt="Team Member 3">
+                                <h3>Pranav Dandegaonkar</h3>
+                                <p>Social Media Head</p>
+                        </div>
+                        <div class="slide">
+                            <img src="https://roboticsclubvitc.co/club/people/Raghav_Arora.jpg" alt="Team Member 3">
+                            <h3>Raghav Arora</h3>
+                            <p>Management Head</p>
+                        </div>
+                        <div class="slide">
+                            <img src="https://roboticsclubvitc.co/club/people/Sagar%20Ramanathan.jpeg" alt="Team Member 3">
+                            <h3>Sagar Ramanathan</h3>
+                            <p>Teaching Head</p>
+                        </div>
+                        <div class="slide">
+                            <img src="https://roboticsclubvitc.co/club/people/Yogaraj%20N.jpeg" alt="Team Member 3">
+                            <h3>Yogaraj</h3>
+                            <p>Project Head</p>
+                            
+                        </div>
+                </div>
+                <div class="controls">
+                    <button class="control prev">&#10094;</button>
+                    <button class="control next">&#10095;</button>
+                </div>
+            </div>
+            
+            <script>
+                const slides = document.querySelector('.slides');
+                const slideElements = document.querySelectorAll('.slide');
+                const prevButton = document.querySelector('.prev');
+                const nextButton = document.querySelector('.next');
+            
+                let currentIndex = 0;
+            
+                function updateSlidePosition() {
+                    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+                }
+            
+                prevButton.addEventListener('click', () => {
+                    currentIndex = (currentIndex === 0) ? slideElements.length - 1 : currentIndex - 1;
+                    updateSlidePosition();
+                });
+            
+                nextButton.addEventListener('click', () => {
+                    currentIndex = (currentIndex === slideElements.length - 1) ? 0 : currentIndex + 1;
+                    updateSlidePosition();
+                });
+            </script>
+            <header>
+                <h1>Achievements</h1>
+                <p style="text-align: center;">Breaking boundaries through our exceptional performance.</p>
+            </header>
+        
+            <main>
+                <footer class="footer">
+                    <p>The only Official Website of Robotics Club VIT Chennai</p>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                    <p>Recruitment for the Club: Enter your email below.</p>
+                    <input type="email" placeholder="Enter your email" style="padding: 10px; border-radius: 5px; border: none; margin-top: 10px;">
+                    <button class="button">Mail Us</button>
+                </footer>
+        
+                <section class="section">
+                    <h2>Stay Linked With Us</h2>
+                    <div class="flex-container">
+                        <div class="card">
+                            <h3>Make-A-Thon</h3>
+                            <p>Thrilled to announce the successful completion of our workshop and more...</p>
+                            <a href="#">Read More</a>
+                        </div>
+                        <div class="card">
+                            <h3>About The Club</h3>
+                            <p>Experience the future of technology with our Robotics Club's latest...</p>
+                            <a href="#">Read More</a>
+                        </div>
+                        <div class="card">
+                            <h3>Robo Expo</h3>
+                            <p>From the School of Mechanical Engineering with SEDAXIS and Robotics Club...</p>
+                            <a href="#">Read More</a>
+                        </div>
+                    </div>
+                </section>
+        
+                <section class="section">
+                    <h2>Connect with Us</h2>
+                    <div style="text-align: center;">
+                        <a href="#" class="button">LinkedIn</a>
+                        <a href="#" class="button">Instagram</a>
+                    </div>
+                </section>
+        
+                <section class="section">
+                    <h2>Explore Our Achievements</h2>
+                    <ul>
+                        <li><a href="#">From the Club</a></li>
+                        <li><a href="#">From the Faculty Coordinator</a></li>
+                    </ul>
+                    <button class="button">View All Achievements</button>
+                </section>
+            </main>
+    
+            
+            
+            
+                
+                
+            

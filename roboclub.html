@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotics Club VIT Chennai</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url("https://c4.wallpaperflare.com/wallpaper/62/205/230/mr-robot-fsociety-screen-shot-dark-elliot-mr-robot-hd-wallpaper-preview.jpg") no-repeat center center fixed;
+            background-size: cover;
+            color: #f0f0f0;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .logos img {
+            height: 50px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .navigation {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navigation a {
+            color: #f0f0f0;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .navigation a:hover {
+            background-color: rgb(232, 59, 145);
+            color: #000;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 150px 50px;
+            text-align: left;
+        }
+        .content h1 {
+            font-size: 54px;
+            margin: 0;
+            font-weight: bold;
+            color: #ffffff;
+            transition: font-size 0.3s;
+            margin-right: 60px;
+        }
+
+        .content h1:hover {
+            font-size: 58px;
+        }
+
+        .content p {
+            font-size: 22px;
+            margin-top: 20px;
+            color: #dcdcdc;
+        }
+
+        .cta-button {
+            margin-top: 30px;
+            padding: 20px 30px;
+            background-color: rgb(235, 26, 130);
+            color: #000;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .cta-button:hover {
+            background-color: rgb(232, 59, 145);
+        }
+        .robot-image {
+            position: absolute;
+            top: 180px; 
+            right: 260px; 
+            width: 150px;
+            height: auto;
+        }
+        .robot-image {
+            position: absolute;
+            top: 180px;
+            right: 260px;
+            width: 150px;
+            height: auto;
+        }
+
+        .robot-image img {
+            height: 500px;
+            width: 400px;
+            height: auto;
+            display: block;
+        }
+
+        .club-description {
+            margin-top: 150px;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+
+
+        }
+
+        .club-description h2 {
+            font-size: 28px;
+            margin-bottom: 60px;
+            text-align: left;
+
+        }
+
+        .club-description p {
+            font-size: 18px;
+            line-height: 1.5;
+            text-align: left;
+        }
+
+        .event-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 20px;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .event-details {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .upcoming-events .event-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .upcoming-events .event-card {
+            width: calc(50% - 10px);
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .upcoming-events .event-card h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .upcoming-events .event-card p {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .upcoming-events .event-card .coming-soon {
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .upcoming-events .arduino-logo {
+            width: 30px;
+            height: 30px;
+            margin: 10px auto;
+            display: block;
+        }
+
+        .arduino-logo {
+            width: 400px;
+            height: 200px;
+        }
+
+        .coming-soon-logo {
+            width: 400px;
+            height: 200px;
+        }
+
+        .events {
+
+
+            width: 40%;
+            
+            margin: 20px;
+            text-align: left;
+            padding: 20px;
+        }
+
+        .event1 {
+            width: 40%;
+            
+            margin: 20px;
+            text-align: left;
+            padding: 20px;
+
+        }
+
+        .event2 {
+            width: 40%;
+            margin: 20px;
+            text-align: left;
+            padding: 20px;
+        }
+
+        .event3 {
+            width: 40%;
+            margin: 20px;
+            text-align: left;
+            padding: 20px;
+
+        }
+
+        .event4 {
+            width: 40%;
+            margin: 20px;
+            text-align: left;
+            padding: 20px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #121212;
+            color: #f0f0f0;
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+            color: #00ff88;
+        }
+
+        a {
+            color: #00ff88;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #ff0077;
+        }
+
+        .section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #00ff88;
+            color: #121212;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .button:hover {
+            background-color:rgb(232, 59, 145);
+            transform: scale(1.1);
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: #2a2a2a;
+            border-radius: 10px;
+            width: 300px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+        }
+
+        .card h3 {
+            color: rgb(235, 26, 130);
+        }
+
+        .footer {
+            background-color: #1e1e1e;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer a {
+            margin: 0 10px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logos">
+            <a href="vit_chennai.html"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSndtCVNWRckuQ5oftYVXuliYq8v-C9DqBZPw&s"
+                    alt="VIT Chennai Logo"></a>
+            <a href="robotics_club.html"><img
+                    src="https://media.licdn.com/dms/image/v2/C560BAQHel4pxxrPm-A/company-logo_200_200/company-logo_200_200/0/1669408320260?e=2147483647&v=beta&t=GzwSZJZbZX3mmwghbz2joTcRb__TiZ5EzdoXr_nNmtk"
+                    alt="Robotics Club Logo"></a>
+        </div>
+        <div class="navigation">
+            <a href="aboutus.html">About</a>
+            <a href="faqs.html">FAQs</a>
+            <a href="team.html">Team</a>
+            <a href="contact.html">Contact</a>
+            
+        </div>
+        <div class="robot-image">
+            <img src="https://i.imgur.com/3LrYx8P.png" alt="Robot Image">
+        </div>
+    </div>
+    <div class="content">
+        <h1>Robotics Club VIT Chennai</h1>
+        <p>Innovation is when Imagination meets Ambition</p>
+        <button class="cta-button">Industrial Reach</button>
+        <div class="club-description">
+            <h2>Know More About The Club</h2>
+            <p>Our Small step would be a giant leap in robotics education.</p>
+            <p>At the Robotics Club, we firmly believe that every small step we take towards robotics education can have
+                a significant impact on the future of the field. By educating and inspiring the next generation of
+                engineers, we are contributing to the advancement of technology and the growth of innovation. Our
+                workshops, events, and projects aim to equip individuals with the skills and knowledge needed to make a
+                real difference in this world of robotics. We are proud to be a part of this transformative journey, and
+                we believe that every contribution, no matter how small, can lead to a giant leap in the field of
+                robotics education.</p>
+        </div>
+        <section class="events">
+            <div class="event-container">
+                <div class="event-details">
+                    <h2>Save the Date:</h2>
+                    <h3>Upcoming Events</h3>
+                    <p>Stay informed and get ready to participate in our exciting upcoming events. Mark your calendar
+                        and join us for a memorable experience.</p>
+                </div>
+            </div>
+        </section>
+        <section class="event1">
+            <div class="event-cards">
+                <div class="event-card">
+                    <div class="coming-soon"></div>
+                    <img src="https://www.shutterstock.com/image-vector/coming-soon-on-dark-background-600nw-2364512887.jpg"
+                        alt="coming soon logo" class="coming-soon-logo">
+                    <h2>Pitch-A-Thon</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <p>Date: 6th and 7th September</p>
+                </div>
+        </section>
+        <section class="event2">
+            <div class="event-card">
+                <img src="https://content.arduino.cc/assets/arduino_logo_1200x630-01.png" alt="Arduino Logo"
+                    class="arduino-logo">
+                <h2>Rev-Up-Arduino [L1]</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+        </section>
+
+        <section class="event3">
+            <div class="event-card">
+                <div class="coming-soon"></div>
+                <img src="https://www.shutterstock.com/image-vector/coming-soon-on-dark-background-600nw-2364512887.jpg"
+                    alt="coming soon logo" class="coming-soon-logo">
+                <h2>Rev-Up-RPI [L1]</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+        </section>
+        <section class="event4">
+
+            <div class="event-card">
+                <img src="https://content.arduino.cc/assets/arduino_logo_1200x630-01.png" alt="Arduino Logo"
+                    class="arduino-logo">
+                <h2>Rev-Up-Arduino [L2]</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+        </section>
+        <header>
+            <h1>Achievements</h1>
+            <p style="text-align: center;">Breaking boundaries through our exceptional performance.</p>
+        </header>
+    
+        <main>
+            <footer class="footer">
+                <p>The only Official Website of Robotics Club VIT Chennai</p>
+                <a href="#">LinkedIn</a>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <p>Recruitment for the Club: Enter your email below.</p>
+                <input type="email" placeholder="Enter your email" style="padding: 10px; border-radius: 5px; border: none; margin-top: 10px;">
+                <button class="button">Mail Us</button>
+            </footer>
+    
+            <section class="section">
+                <h2>Stay Linked With Us</h2>
+                <div class="flex-container">
+                    <div class="card">
+                        <h3>Make-A-Thon</h3>
+                        <p>Thrilled to announce the successful completion of our workshop and more...</p>
+                        <a href="#">Read More</a>
+                    </div>
+                    <div class="card">
+                        <h3>About The Club</h3>
+                        <p>Experience the future of technology with our Robotics Club's latest...</p>
+                        <a href="#">Read More</a>
+                    </div>
+                    <div class="card">
+                        <h3>Robo Expo</h3>
+                        <p>From the School of Mechanical Engineering with SEDAXIS and Robotics Club...</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="section">
+                <h2>Connect with Us</h2>
+                <div style="text-align: center;">
+                    <a href="#" class="button">LinkedIn</a>
+                    <a href="#" class="button">Instagram</a>
+                </div>
+            </section>
+    
+            <section class="section">
+                <h2>Explore Our Achievements</h2>
+                <ul>
+                    <li><a href="#">From the Club</a></li>
+                    <li><a href="#">From the Faculty Coordinator</a></li>
+                </ul>
+                <button class="button">View All Achievements</button>
+            </section>
+        </main>
+        
+    </div>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>
